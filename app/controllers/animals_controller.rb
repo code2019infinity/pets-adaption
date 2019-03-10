@@ -1,10 +1,15 @@
 class AnimalsController < ApplicationController
+  before_action :authenticate_user!,except: [:index, :show]
   before_action :set_animal, only: [:show, :edit, :update, :destroy]
 
   # GET /animals
   # GET /animals.json
   def index
     @animals = Animal.all
+    if current_user
+      @animals = Animal.all
+    end
+
   end
 
   # GET /animals/1
