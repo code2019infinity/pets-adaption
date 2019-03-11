@@ -25,6 +25,11 @@ p{
 
 body{
     text-align: right;
+    // background: url(https://welovecatsandkittens.com/wp-content/uploads/2015/11/cuter-face.jpg);
+    background-size: cover; 
+background-repeat: no-repeat;
+background-attachment: fixed;
+    
      
 }
 h1{
@@ -32,7 +37,7 @@ h1{
    font-size:50px;
 }
 .jumbotron.text-center{
-     background: rgb(239, 224, 141);
+     background: #9DB5B2;
 
 }
 .actions input {

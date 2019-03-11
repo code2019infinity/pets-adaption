@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  get 'pages/index'
+ root 'pages#index'
   devise_for :users
   resources :animals do 
     resources :comments
