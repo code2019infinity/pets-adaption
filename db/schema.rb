@@ -48,6 +48,7 @@ ActiveRecord::Schema.define(version: 2019_03_11_111223) do
     t.bigint "animal_id"
     t.index ["animal_id"], name: "index_comments_on_animal_id"
     t.index ["user_id"], name: "index_comments_on_user_id"
+    t.string "title"
   end
 
   create_table "users", force: :cascade do |t|

@@ -13,7 +13,6 @@
  */
  @import "pages.scss";
 @import "bootstrap";
-
 @import url("https://fonts.googleapis.com/css?family=Katibeh|Mirza");
 
 p{
@@ -26,7 +25,7 @@ p{
 }
 
 body{
-    text-align: right; 
+    text-align: right;
      
 }
 h1{
@@ -67,5 +66,9 @@ nav-link {
 .container{
     width: 400px;
     margin:0 auto;
+   font-size:50px;
+}
+.jumbotron.text-center{
+     background: rgb(239, 224, 141);
 
 }

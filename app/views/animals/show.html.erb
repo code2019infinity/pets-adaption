@@ -54,3 +54,6 @@
 <%= render 'comments/form', comment: @comment, url: animal_comments_path(@animal) , animal_id: @animal.id %>
 
 <%= link_to 'Back', animals_path %>
+<%= link_to 'تعديل', edit_animal_path(@animal) %> |
+<%= link_to 'خلف', animals_path %>
+
