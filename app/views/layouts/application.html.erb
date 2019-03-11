@@ -12,7 +12,7 @@
   <div class="jumbotron text-center">
   
   
-<nav class="nav" class="registration">
+<nav dir="ltr" class="nav" class="registration">
   <% if user_signed_in? %>
   <%= link_to "تسجيل الخروج"  , destroy_user_session_path,class:"nav-link " , method: :delete %>
   <%= current_user.email %>
