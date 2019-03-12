@@ -13,6 +13,7 @@
  */
  @import "pages.scss";
 @import "bootstrap";
+
 @import url("https://fonts.googleapis.com/css?family=Katibeh|Mirza");
 
 p{
@@ -25,12 +26,7 @@ p{
 }
 
 body{
-    text-align: right;
-    // background: url(https://welovecatsandkittens.com/wp-content/uploads/2015/11/cuter-face.jpg);
-    background-size: cover; 
-background-repeat: no-repeat;
-background-attachment: fixed;
-    
+    text-align: right; 
      
 }
 h1{
