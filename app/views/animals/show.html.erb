@@ -39,5 +39,18 @@
 
 <%= link_to 'Back', animals_path %>
 <%= link_to 'تعديل', edit_animal_path(@animal) %> |
-<%= link_to 'خلف', animals_path %>
+<%= link_to 'خلف', root_path %>
 
+<%= link_to 'Edit', edit_animal_path(@animal) %> |
+
+
+<h2>Comments</h2>
+
+<% @animal.comments.each do |comment| %>
+    <p> <%= comment.body %> </p>
+    <p> <%= comment.user.email %> </p>
+<% end %>
+
+<%= render 'comments/form', comment: @comment, url: animal_comments_path(@animal) , animal_id: @animal.id %>
+
+<%= link_to 'Back', animals_path %>

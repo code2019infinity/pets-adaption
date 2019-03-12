@@ -11,7 +11,9 @@
  * It is generally better to create a new file per style scope.
  *
  */
+ @import "pages.scss";
 @import "bootstrap";
+
 @import url("https://fonts.googleapis.com/css?family=Katibeh|Mirza");
 
 p{
@@ -24,22 +26,19 @@ p{
 }
 
 body{
-    text-align: right;
-    // background: url(https://welovecatsandkittens.com/wp-content/uploads/2015/11/cuter-face.jpg);
-    background-size: cover; 
-background-repeat: no-repeat;
-background-attachment: fixed;
-    
+    text-align: right; 
      
 }
 h1{
    font-family: 'Katibeh', cursive;
-   font-size:50px;
+   font-size:70px;
+   margin: 180px 0;
 }
-.jumbotron.text-center{
+.pages .jumbotron.text-center{
      background: #9DB5B2;
-
+     display: none;
 }
+
 .actions input {
      outline: none; 
      -webkit-appearance: none;
@@ -48,4 +47,25 @@ h1{
 }
 .text-center{
     background:rgba(186, 206, 181 ,0.4)
+}
+.pages{
+text-align: right;
+background: image-url("sss.jpg");
+background-size: cover; 
+background-repeat: no-repeat;
+background-attachment: fixed;  
+}
+.pages h1{
+    text-align: center;
+    color:white;
+}
+
+nav-link {
+    padding: 15px;
+
+}
+.container{
+    width: 400px;
+    margin:0 auto;
+
 }

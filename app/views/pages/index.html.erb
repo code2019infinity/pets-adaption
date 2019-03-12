@@ -1,2 +1,25 @@
+<nav dir="ltr" class="nav" class="registration">
+  <% if user_signed_in? %>
+  <%= link_to "تسجيل الخروج"  , destroy_user_session_path,class:"nav-link nav-link btn btn-outline-warning btn-rounded waves-effect" , method: :delete %>
+  <%= current_user.email %>
+<% else %>
+  <%= link_to "تسجيل الدخول "  ,new_user_session_path, class:"nav-link nav-link btn btn-outline-warning btn-rounded waves-effect"  %>
+  <%= link_to " إنشاء حساب" , new_user_registration_path,class:"nav-link nav-link btn btn-outline-warning btn-rounded waves-effect" %>
+  <% end%>
+</nav>
+
+<ul class="nav justify-content-center">
+  <li class="nav-item">
+<%= link_to ' تبنى', animals_path,class:"nav-link active" %>
+</li>
+<li class="nav-item">
+<%= link_to 'طلب تبني',new_animal_path , class:"nav-link active" %>
+</li>
+<li class="nav-item">
+<%= link_to 'الداعمين', class:"nav-link active" %>
+</li>
+</ul>
+
 <h1>مرحبا بكم في مجتمع تبناني</h1>
+
 

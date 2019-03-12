@@ -7,28 +7,31 @@
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
   </head>
-
-  <body>
+  
+  <body class="<%= controller.controller_name %>">
+  <div id="bg">
+  
   <div class="jumbotron text-center">
   
   
 <nav dir="ltr" class="nav" class="registration">
   <% if user_signed_in? %>
-  <%= link_to "تسجيل الخروج"  , destroy_user_session_path,class:"nav-link " , method: :delete %>
+  <%= link_to "تسجيل الخروج"  , destroy_user_session_path , method: :delete,class:"nav-link btn btn-outline-warning btn-rounded waves-effect" %>
   <%= current_user.email %>
 <% else %>
-  <%= link_to "تسجيل الدخول "  ,new_user_session_path,class:"nav-link"  %>
-  <%= link_to " إنشاء حساب" , new_user_registration_path,class:"nav-link" %>
+  <%= link_to "تسجيل الدخول "  ,new_user_session_path,class:"nav-link btn btn-outline-warning btn-rounded waves-effect"  %>
+  <%= link_to " إنشاء حساب" , new_user_registration_path,class:"nav-link btn btn-outline-warning btn-rounded waves-effect" %>
   <% end%>
 </nav>
 
-   <h1>تبناني</h1> 
+  <h1 >تبناني</h1> 
    </div>
-  
-   <div class="container">
-
+  <p id="notice"><%= notice %></p>
+s
     <%= yield %>
     <%= javascript_include_tag 'application' %>
     </div>
+
+  </div>
   </body>
 </html>

@@ -34,7 +34,7 @@ class AnimalsController < ApplicationController
 
     respond_to do |format|
       if @animal.save
-        format.html { redirect_to @animal, notice: 'تم إضافة الطلب بنجاح' }
+        format.html { redirect_to root_path, notice: 'تم إضافة الطلب بنجاح' }
         format.json { render :show, status: :created, location: @animal }
       else
         format.html { render :new }
