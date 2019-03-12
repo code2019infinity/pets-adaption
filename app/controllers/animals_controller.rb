@@ -15,6 +15,7 @@ class AnimalsController < ApplicationController
   # GET /animals/1
   # GET /animals/1.json
   def show
+    @comment = Comment.new
   end
 
   # GET /animals/new
@@ -74,6 +75,6 @@ class AnimalsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def animal_params
-      params.require(:animal).permit(:category, :description, :location, :adapted)
+      params.require(:animal).permit(:category, :description, :location, :adapted, :comment, :user_id)
     end
 end
