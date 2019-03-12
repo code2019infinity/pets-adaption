@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @animal.category %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @animal.description %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @animal.location %>
+</p>
+
+<p>
+  <strong>Adapted:</strong>
+  <%= @animal.adapted %>
+</p>
+
+<%= link_to 'Edit', edit_animal_path(@animal) %> |
+
+
+<h2>Comments</h2>
+
+<% @animal.comments.each do |comment| %>
+    <p> <%= comment.body %> </p>
+    <p> <%= comment.user.email %> </p>
+<% end %>
+
+<%= render 'comments/form', comment: @comment, url: animal_comments_path(@animal) , animal_id: @animal.id %>
+
+<%= link_to 'Back', animals_path %>
