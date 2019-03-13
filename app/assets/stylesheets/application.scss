@@ -68,7 +68,7 @@ nav-link {
     padding: 15px;
 
 }
-.container{
+.saracontainer{
     width: 400px;
     margin:0 auto;
    font-size:50px;
@@ -101,4 +101,14 @@ nav-link {
     link.active {
     color: rgba(114, 129, 132, 0.9);
     
+}
+
+.card {
+    height: 200px;
+   border: 0px; 
+    /* border: 1px solid rgba(0, 0, 0, 0.125); */
+}
+
+.card-body{
+border: 1px solid rgba(0, 0, 0, 0.125); 
 }
