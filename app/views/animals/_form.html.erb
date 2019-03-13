@@ -14,10 +14,11 @@
       </ul>
     </div>
   <% end %>
-  <div class="card-body px-lg-5 pt-0">
+  
+  <div class="card-body px-lg-5 pt-0 ">
   <form class="text-center" style="color: #757575;">
 
-  
+  <div class="container newadd">
   <div class="form-group">
     <%= form.label :العنوان %>
     <%= form.text_field :title,class:"form-control" %>
@@ -41,7 +42,7 @@
   </div>
   
   <div class="field">
-    <%= form.label :image %><br>
+    <%= form.label :صوره %><br>
     <%= form.file_field :image %>
   </div>
 
@@ -54,5 +55,6 @@
   <div class="actions btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0">
     <%= form.submit %>
   </div>
+  
 <% end %>
 <div>
