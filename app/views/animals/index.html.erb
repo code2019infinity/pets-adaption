@@ -6,7 +6,7 @@
   <% @animals.each do |animal| %>
     <div class="row"> 
       <%= link_to animal do  %>
-         <p class="list-group-item"><%= animal.title %></p>
+         <p class="list-group-item"><%= animal.description %></p>
       <% end %>
     </div>
   <% end %>
