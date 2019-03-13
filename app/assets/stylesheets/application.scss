@@ -27,12 +27,16 @@ p{
 
 body{
     text-align: right; 
+    color:black;
      
 }
 h1{
    font-family: 'Katibeh', cursive;
    font-size:70px;
-   margin: 180px 0;
+   text-align: center;
+}
+.homepage{
+    margin: 180px 0;
 }
 .pages .jumbotron.text-center{
      background: #9DB5B2;
@@ -72,4 +76,28 @@ nav-link {
 .jumbotron.text-center{
      background: rgb(239, 224, 141);
 
+}
+.nav-link {
+    
+    margin: 15px;}
+
+    .navbar.navbar-expand-lg.navbar-light{
+        background: rgba(255,255,255,0.4);
+        text-align: center;
+
+    }
+    .navbar-nav{
+       margin: auto;
+    }
+    .nav-link.active {
+        font-size: 25px;
+        font-family: 'Katibeh', cursive;
+        color: rgba(114, 129, 132, 0.9);
+        
+       
+    }
+
+    link.active {
+    color: rgba(114, 129, 132, 0.9);
+    
 }

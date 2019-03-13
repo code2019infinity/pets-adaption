@@ -1,3 +1,7 @@
+
+
+
+<div class="container mycontainer">
 <%= form_with(model: animal, local: true) do |form| %>
   <% if animal.errors.any? %>
     <div id="error_explanation">
@@ -13,22 +17,25 @@
   <div class="card-body px-lg-5 pt-0">
   <form class="text-center" style="color: #757575;">
 
-  <div class="md-form">
+  
+  <div class="form-group">
     <%= form.label :العنوان %>
     <%= form.text_field :title,class:"form-control" %>
    </div>
 
-  <div class="md-form">
+<div class="form-group">
     <%= form.label :نوعه %>
     <%= form.text_field :category,class:"form-control" %>
   </div>
 
-  <div class="md-form">
+  <div class="form-group">
     <%= form.label :الوصف %>
     <%= form.text_area :description,class:"form-control" %>
   </div>
 <%= form.hidden_field :user_id, value: current_user.id%>
   <div class="md-form">
+
+  <div class="form-group">
     <%= form.label :الموقع %>
     <%= form.text_field :location,class:"form-control" %>
   </div>
@@ -38,7 +45,7 @@
     <%= form.file_field :image %>
   </div>
 
-  <div class="md-form">
+  <div class="form-group">
     <%= form.label :تبنى %>
     <%= form.check_box :adapted,class:"form-control" %>
 <%= form.hidden_field :user_id, value: current_user.id%>
@@ -48,3 +55,4 @@
     <%= form.submit %>
   </div>
 <% end %>
+<div>

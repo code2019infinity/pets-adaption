@@ -1,21 +1,5 @@
 
- <div id="bg">
-  
-  <div class="jumbotron text-center">
-  
-  
-<nav dir="ltr" class="nav" class="registration">
-  <% if user_signed_in? %>
-  <%= link_to "تسجيل الخروج"  , destroy_user_session_path , method: :delete,class:"nav-link btn btn-outline-warning btn-rounded waves-effect" %>
-  <%= current_user.email %>
-<% else %>
-  <%= link_to "تسجيل الدخول "  ,new_user_session_path,class:"nav-link btn btn-outline-warning btn-rounded waves-effect"  %>
-  <%= link_to " إنشاء حساب" , new_user_registration_path,class:"nav-link btn btn-outline-warning btn-rounded waves-effect" %>
-  <% end%>
-</nav>
-
-  <h1 >تبناني</h1> 
-   </div>
+ 
 
    <div class="continer">
 <div class="card">

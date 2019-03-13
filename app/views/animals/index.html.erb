@@ -1,15 +1,18 @@
 
 
 <div class="container" class="animal-list">
+<div class="list-group">
+<div class="container" >
   <% @animals.each do |animal| %>
     <div class="row"> 
       <%= link_to animal do  %>
-         <p><%= animal.title %></p>
+         <p class="list-group-item"><%= animal.title %></p>
       <% end %>
     </div>
   <% end %>
 </div>
-<%= link_to 'إضافة طلب جديد', new_animal_path %>
+</div>
+
 
 
 

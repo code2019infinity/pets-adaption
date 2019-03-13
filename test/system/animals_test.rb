@@ -12,13 +12,13 @@ class AnimalsTest < ApplicationSystemTestCase
 
   test "creating a Animal" do
     visit animals_url
-    click_on "New Animal"
+    click_on "إضافة طلب جديد"
 
     fill_in "Adapted", with: @animal.adapted
     fill_in "Description", with: @animal.description
     fill_in "Location", with: @animal.location
     fill_in "Type", with: @animal.type
-    click_on "Create Animal"
+    click_on "إضافة"
 
     assert_text "Animal was successfully created"
     click_on "Back"
@@ -26,7 +26,7 @@ class AnimalsTest < ApplicationSystemTestCase
 
   test "updating a Animal" do
     visit animals_url
-    click_on "Edit", match: :first
+    click_on "تعديل", match: :first
 
     fill_in "Adapted", with: @animal.adapted
     fill_in "Description", with: @animal.description
@@ -34,16 +34,16 @@ class AnimalsTest < ApplicationSystemTestCase
     fill_in "Type", with: @animal.type
     click_on "Update Animal"
 
-    assert_text "Animal was successfully updated"
-    click_on "Back"
+    assert_text "تم الإضافه بنجاح"
+    click_on "خلف"
   end
 
   test "destroying a Animal" do
     visit animals_url
     page.accept_confirm do
-      click_on "Destroy", match: :first
+      click_on "حذف", match: :first
     end
 
-    assert_text "Animal was successfully destroyed"
+    assert_text "تم الحذف بنجاح"
   end
 end
