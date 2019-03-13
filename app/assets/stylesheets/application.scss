@@ -28,12 +28,14 @@ p{
 body{
     text-align: right; 
     color:black;
+    background: rgb(249, 249, 249);
      
 }
 h1{
    font-family: 'Katibeh', cursive;
    font-size:70px;
    text-align: center;
+   
 }
 .homepage{
     margin: 180px 0;
@@ -54,51 +56,65 @@ h1{
 }
 .pages{
 text-align: right;
-background: image-url("im.jpg");
+background: image-url("sss.jpg");
 background-size: cover; 
 background-repeat: no-repeat;
 background-attachment: fixed;  
 }
 .pages h1{
     text-align: center;
-    color:white;
+ color:rgb(219, 219, 203);
 }
 
 nav-link {
     padding: 15px;
 
 }
-.container{
-    width: 400px;
+.log-in{
+    width: 600px;
     margin:0 auto;
-   font-size:50px;
+   font-size:20px;
 }
 .jumbotron.text-center{
-     background: rgb(239, 224, 141);
+     background: rgb(244, 244, 212);
 
 }
-.nav-link {
-    
-    margin: 15px;}
+.nav-link {  
+    margin: 15px;
+}
 
     .navbar.navbar-expand-lg.navbar-light{
-        background: rgba(255,255,255,0.4);
+        background: rgba(0,0,0,0.3);
         text-align: center;
-
     }
-    .navbar-nav{
+    .navbar-nav {
        margin: auto;
+       color: rgb(229, 226, 188)!important;
     }
+    .link.active {
+    color: rgb(229, 226, 188)!important;
+}
     .nav-link.active {
         
-        color: rgba(114, 129, 132, 0.9);
+         color: rgb(229, 226, 188)!important;
         font-family: 'Scheherazade', serif; 
         font-size:30px;
         
        
     }
 
-    link.active {
-    color: rgba(114, 129, 132, 0.9);
-    
+ 
+
+.my-4{
+        margin-left: 3px;
+
+}
+
+
+.newadd{
+    width: 700px;
+}
+.btn-outline-info {
+    color: black;
+    border-color: black;
 }
