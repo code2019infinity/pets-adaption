@@ -17,7 +17,11 @@
   </div>
 
   <%= form.hidden_field :animal_id, value: animal_id%>
-  <%= form.hidden_field :user_id, value: current_user.id%>
+
+
+  <% if current_user %>
+    <%= form.hidden_field :user_id, value: current_user.id%>
+  <% end %>
 
   <div class="actions">
     <%= form.submit %>

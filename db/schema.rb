@@ -25,7 +25,10 @@ ActiveRecord::Schema.define(version: 2019_03_11_111223) do
     t.string "image"
     t.bigint "user_id"
     t.string "title"
+<<<<<<< HEAD
     t.string "image"
+=======
+>>>>>>> fixed comments , users cant delete others , User must exist to add comment's , the comment body should be not empty
     t.index ["user_id"], name: "index_animals_on_user_id"
   end
 
