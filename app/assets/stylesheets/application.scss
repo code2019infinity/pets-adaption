@@ -37,6 +37,12 @@ h1{
 }
 .homepage{
     margin: 180px 0;
+
+}
+.homepage:hover{
+    background: rgba(255,255,255,0.4);
+            text-align: center;
+        padding: 5px 5px 5px 15px;
 }
 .pages .jumbotron.text-center{
      background: #9DB5B2;
@@ -99,7 +105,7 @@ nav-link {
     }
 
     link.active {
-    color: rgba(114, 129, 132, 0.9);
+    color: rgba(114, 129, 132, 0.9);}
     
 }
 
@@ -115,13 +121,4 @@ border: 1px solid rgba(0, 0, 0, 0.125);
 .main-title a{
 text-decoration: none; 
 color: black; 
-}
-.card {
-    height: 200px;
-   border: 0px; 
-    /* border: 1px solid rgba(0, 0, 0, 0.125); */
-}
-
-.card-body{
-border: 1px solid rgba(0, 0, 0, 0.125); 
 }

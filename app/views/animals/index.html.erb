@@ -2,28 +2,33 @@
 <div class="container">
   <div class="row">
   <% @animals.each do |animal| %>
-    <div class="row"> 
-      <%= link_to animal do  %>
-         <p class="list-group-item"><%= animal.description %></p>
-      <% end %>
-    </div>
-  <% end %>
-</div>
-</div>
-
-
-
     <div class="col-md-4 mt-2">
       <div class="card">
-        <%= image_tag animal.image.url.to_s, class: "card-img-top" %>
+         <img style="width:100%;" , class: "card-img-top" />
+          <% if animal.image.url != nil %>
+               <%= image_tag animal.image.url , class:"img-responsive", style: "width: 14rem;  height: 200px;"%>
+           <%else%>
+               <%= image_tag 'https://openclipart.org/image/2400px/svg_to_png/214643/black_cat_black_and_white.png', style: "width: 12rem; margin:auto; height: 200px;" %>
+          <%end%>
         <div class="card-body">
           <h4 class="card-title"><%= animal.title %></h4>
           <h6 class="card-text"> <%= animal.description%></h6>
 
           <%= link_to 'عرض', animal, class: "card-link" %>
+     
+
+          <% if current_user %>
+
           <% if current_user.id == animal.user_id%>
           <%= link_to 'حذف', animal, method: :delete, data: { confirm: 'Are you sure?' } , class: "card-link" %>
+          <%else%>
+          <%= link_to animals_path %>
           <% end %>
+          <%else%>
+          <%= link_to animals_path %>
+          <% end %>
+
+
         </div> 
         </div> 
       </div>

@@ -39,6 +39,13 @@
 
 <%= render 'comments/form', comment: @comment, url: animal_comments_path(@animal) , animal_id: @animal.id %>
 
+<p class="text-center">
+              <% if @animal.image.url != nil %>
+                <%= image_tag @animal.image.url, style: "width: 12rem;  height: 250px;"%>
+              <%else%>
+              <%= image_tag 'https://fscomps.fotosearch.com/compc/CSP/CSP439/cat-silhouette-clipart__k22365905.jpg' %>
+              <%end%>
+          </p>
 
 <%= link_to 'تعديل', edit_animal_path(@animal) %> |
 <%= link_to 'خلف', root_path %>
