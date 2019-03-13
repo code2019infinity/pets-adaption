@@ -30,6 +30,11 @@
     <%= form.label :adapted %>
     <%= form.check_box :adapted %>
   </div>
+  
+  <div class="field">
+    <%= form.label :image %><br>
+    <%= form.file_field :image %>
+  </div>
 
   <div class="actions">
     <%= form.submit %>

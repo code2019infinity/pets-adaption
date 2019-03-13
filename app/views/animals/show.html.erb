@@ -19,6 +19,10 @@
   <strong>Adapted:</strong>
   <%= @animal.adapted %>
 </p>
+<p>
+  <strong>Image:</strong>
+  <%= image_tag @animal.image.url.to_s %>
+</p>
 
 <%= link_to 'Edit', edit_animal_path(@animal) %> |
 
