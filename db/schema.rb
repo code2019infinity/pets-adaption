@@ -23,20 +23,8 @@ ActiveRecord::Schema.define(version: 2019_03_11_111223) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "user_id"
-    t.index ["user_id"], name: "index_animals_on_user_id"
-  end
-
-  create_table "comments", force: :cascade do |t|
-    t.text "body"
-    t.bigint "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.bigint "animal_id"
-    t.index ["animal_id"], name: "index_comments_on_animal_id"
-    t.index ["user_id"], name: "index_comments_on_user_id"
-    t.string "image"
     t.string "title"
-    t.bigint "user_id"
+    t.string "image"
     t.index ["user_id"], name: "index_animals_on_user_id"
   end
 
