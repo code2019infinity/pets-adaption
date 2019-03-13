@@ -54,7 +54,7 @@ h1{
 }
 .pages{
 text-align: right;
-background: image-url("sss.jpg");
+background: image-url("im.jpg");
 background-size: cover; 
 background-repeat: no-repeat;
 background-attachment: fixed;  
@@ -90,9 +90,10 @@ nav-link {
        margin: auto;
     }
     .nav-link.active {
-        font-size: 25px;
-        font-family: 'Katibeh', cursive;
+        
         color: rgba(114, 129, 132, 0.9);
+        font-family: 'Scheherazade', serif; 
+        font-size:30px;
         
        
     }
