@@ -2,33 +2,33 @@
 
 
 <p>
-  <strong>:نوعه</strong>
+  <strong>النوع :</strong>
   <%= @animal.category %>
 </p>
 
 <p>
-  <strong>:الوصف</strong>
+  <strong>الوصف :</strong>
   <%= @animal.description %>
 </p>
 
 <p>
-  <strong>:الموقع</strong>
+  <strong>الموقع :</strong>
   <%= @animal.location %>
 </p>
 
 <p>
-  <strong>تبنى</strong>
+  <strong>تبنى :</strong>
   <%= @animal.adapted %>
 </p>
 <p>
-  <strong>صوره </strong>
+  <strong>صوره :</strong>
   <%= image_tag @animal.image.url.to_s %>
 </p>
 
-<%= link_to 'Edit', edit_animal_path(@animal) %> |
+<%= link_to 'تعديل', edit_animal_path(@animal) %> 
 
 
-<h2>Comments</h2>
+<h2>التعليقات .. </h2>
 
 <% @animal.comments.each do |comment| %>
   <% if comment.body != "" %>
@@ -39,11 +39,7 @@
 
 <%= render 'comments/form', comment: @comment, url: animal_comments_path(@animal) , animal_id: @animal.id %>
 
-<%= link_to 'Back', animals_path %>
+
 <%= link_to 'تعديل', edit_animal_path(@animal) %> |
 <%= link_to 'خلف', root_path %>
-
-<%= link_to 'Edit', edit_animal_path(@animal) %> |
-
-
 
