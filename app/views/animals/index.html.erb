@@ -1,18 +1,21 @@
 
-
-<div class="container" class="animal-list">
-<div class="list-group">
-<div class="container" >
+<div class="container">
+  <div class="row">
   <% @animals.each do |animal| %>
-    <div class="row"> 
-      <%= link_to animal do  %>
-         <p class="list-group-item"><%= animal.title %></p>
-      <% end %>
-    </div>
-  <% end %>
+    <div class="col-md-4 mt-2">
+      <div class="card">
+        <%= image_tag animal.image.url.to_s, class: "card-img-top" %>
+        <div class="card-body">
+          <h4 class="card-title"><%= animal.title %></h4>
+          <h6 class="card-text"> <%= animal.description%></h6>
+
+          <%= link_to 'عرض', animal, class: "card-link" %>
+          <% if current_user.id == animal.user_id%>
+          <%= link_to 'حذف', animal, method: :delete, data: { confirm: 'Are you sure?' } , class: "card-link" %>
+          <% end %>
+        </div> 
+        </div> 
+      </div>
+    <% end %>
+  </div>
 </div>
-</div>
-
-
-
-
