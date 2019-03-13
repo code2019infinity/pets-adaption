@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 2019_03_11_111223) do
     t.boolean "adapted"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "image"
     t.bigint "user_id"
     t.index ["user_id"], name: "index_animals_on_user_id"
   end
