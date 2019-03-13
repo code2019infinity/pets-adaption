@@ -12,13 +12,13 @@ class CommentsTest < ApplicationSystemTestCase
 
   test "creating a Comment" do
     visit comments_url
-    click_on "New Comment"
+    click_on "إضافة تعليق"
 
     fill_in "Body", with: @comment.body
     fill_in "User", with: @comment.user
-    click_on "Create Comment"
+    click_on "إضافة التعليق"
 
-    assert_text "Comment was successfully created"
+    assert_text "تم إضافة التعليق بنجاح"
     click_on "Back"
   end
 
@@ -28,18 +28,18 @@ class CommentsTest < ApplicationSystemTestCase
 
     fill_in "Body", with: @comment.body
     fill_in "User", with: @comment.user
-    click_on "Update Comment"
+    click_on "تعديل التعليق"
 
-    assert_text "Comment was successfully updated"
+    assert_text "تم تعديل التعليق بنجاح"
     click_on "Back"
   end
 
   test "destroying a Comment" do
     visit comments_url
     page.accept_confirm do
-      click_on "Destroy", match: :first
+      click_on "حذف ", match: :first
     end
 
-    assert_text "Comment was successfully destroyed"
+    assert_text "تم الحذف بنجاح"
   end
 end

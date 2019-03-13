@@ -1,32 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html dir="rtl">
   <head>
-    <title>PetsAdaption</title>
+    <title>Pets Adaption</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
   </head>
-
-  <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-   <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav">
+  
+  <body class="<%= controller.controller_name %>">
+  <div id="bg">
+  
+  <div class="jumbotron text-center">
+  
+  
+<nav dir="ltr" class="nav" class="registration">
   <% if user_signed_in? %>
-  <%= link_to "Logout"  , destroy_user_session_path ,class:"nav-item nav-link active", method: :delete %>
+  <%= link_to "تسجيل الخروج"  , destroy_user_session_path , method: :delete,class:"nav-link btn btn-outline-warning btn-rounded waves-effect" %>
   <%= current_user.email %>
 <% else %>
-  <%= link_to "Log in"  ,new_user_session_path %>
-  <%= link_to "Sign Up" , new_user_registration_path %>
+  <%= link_to "تسجيل الدخول "  ,new_user_session_path,class:"nav-link btn btn-outline-warning btn-rounded waves-effect"  %>
+  <%= link_to " إنشاء حساب" , new_user_registration_path,class:"nav-link btn btn-outline-warning btn-rounded waves-effect" %>
+  <% end%>
+</nav>
 
-  <% end%> 
+  <h1 >تبناني</h1> 
    </div>
-  </div>
-  </nav >
+  <p id="notice"><%= notice %></p>
+
     <%= yield %>
     <%= javascript_include_tag 'application' %>
+    </div>
+
+  </div>
   </body>
 </html>

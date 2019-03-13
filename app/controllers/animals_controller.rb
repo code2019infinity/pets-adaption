@@ -34,7 +34,7 @@ class AnimalsController < ApplicationController
 
     respond_to do |format|
       if @animal.save
-        format.html { redirect_to @animal, notice: 'Animal was successfully created.' }
+        format.html { redirect_to root_path, notice: 'تم إضافة الطلب بنجاح' }
         format.json { render :show, status: :created, location: @animal }
       else
         format.html { render :new }
@@ -48,7 +48,7 @@ class AnimalsController < ApplicationController
   def update
     respond_to do |format|
       if @animal.update(animal_params)
-        format.html { redirect_to @animal, notice: 'Animal was successfully updated.' }
+        format.html { redirect_to @animal, notice: 'تم تعديل الطلب بنجاح' }
         format.json { render :show, status: :ok, location: @animal }
       else
         format.html { render :edit }
@@ -62,7 +62,7 @@ class AnimalsController < ApplicationController
   def destroy
     @animal.destroy
     respond_to do |format|
-      format.html { redirect_to animals_url, notice: 'Animal was successfully destroyed.' }
+      format.html { redirect_to animals_url, notice: 'تم حذف الطلب بنجاح ' }
       format.json { head :no_content }
     end
   end
@@ -75,6 +75,6 @@ class AnimalsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def animal_params
-      params.require(:animal).permit(:category, :description, :location, :adapted,:image, :comment, :user_id)
+      params.require(:animal).permit(:category, :description, :location, :adapted,:image, :comment, :user_id, :title)
     end
 end
