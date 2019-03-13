@@ -116,3 +116,12 @@ border: 1px solid rgba(0, 0, 0, 0.125);
 text-decoration: none; 
 color: black; 
 }
+.card {
+    height: 200px;
+   border: 0px; 
+    /* border: 1px solid rgba(0, 0, 0, 0.125); */
+}
+
+.card-body{
+border: 1px solid rgba(0, 0, 0, 0.125); 
+}
