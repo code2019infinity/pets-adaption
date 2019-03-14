@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 2019_03_11_111223) do
     t.string "image"
     t.bigint "user_id"
     t.string "title"
+    t.string "image"
     t.index ["user_id"], name: "index_animals_on_user_id"
   end
 
