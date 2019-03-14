@@ -49,12 +49,12 @@ h1{
      display: none;
 }
 
-.actions input {
-     outline: none; 
-     -webkit-appearance: none;
-     border: none !important ; 
-    background:  none !important ; 
-}
+// .actions input {
+//      outline: none; 
+//      -webkit-appearance: none;
+//      border: none !important ; 
+//     background:  none !important ; 
+// }
 .text-center{
     background:rgba(186, 206, 181 ,0.4)
 }
@@ -77,7 +77,7 @@ nav-link {
 .saracontainer{
     width: 400px;
     margin:0 auto;
-   font-size:50px;
+   font-size:30px;
 }
 .jumbotron.text-center{
      background: rgb(239, 224, 141);
@@ -85,28 +85,27 @@ nav-link {
 }
 .nav-link {
     
-    margin: 15px;}
+margin: 15px;}
 
-    .navbar.navbar-expand-lg.navbar-light{
-        background: rgba(255,255,255,0.4);
-        text-align: center;
+.navbar.navbar-expand-lg.navbar-light{
+    background: rgba(255,255,255,0.4);
+    text-align: center;
 
-    }
-    .navbar-nav{
-       margin: auto;
-    }
-    .nav-link.active {
-        
-        color: rgba(114, 129, 132, 0.9);
-        font-family: 'Scheherazade', serif; 
-        font-size:30px;
-        
-       
-    }
-
-    link.active {
-    color: rgba(114, 129, 132, 0.9);}
+}
+.navbar-nav{
+    margin: auto;
+}
+.nav-link.active {
     
+    color: rgba(114, 129, 132, 0.9);
+    font-family: 'Scheherazade', serif; 
+    font-size:30px;
+    
+    
+}
+
+link.active {
+color: rgba(114, 129, 132, 0.9);
 }
 
 .card {
@@ -121,4 +120,13 @@ border: 1px solid rgba(0, 0, 0, 0.125);
 .main-title a{
 text-decoration: none; 
 color: black; 
+}
+
+.coment{
+text-align: center;
+}
+
+.btn3d.btn-primary ,.edit , .back{
+box-shadow: 0 0 0 1px #428bca inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 8px 0 0 #357ebd, 0 8px 0 1px rgba(0, 0, 0, 0.4), 0 8px 8px 1px rgba(0, 0, 0, 0.5);
+margin-right: 20px;
 }

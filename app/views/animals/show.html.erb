@@ -1,39 +1,29 @@
 <p id="notice"><%= notice %></p>
+<div class="container">
+<ul class="list-group">
+    <li class="list-group-item"> <strong>النوع :</strong>
+  <%= @animal.category %> </li>
+    <li class="list-group-item"> <strong>الوصف :</strong>
+  <%= @animal.description %> </li>
+    <li class="list-group-item"><strong>الموقع :</strong>
+  <%= @animal.location %> </li>
+    <li class="list-group-item"> <strong>تبنى :</strong>
+  <%= @animal.adapted %> </li>
+    <li class="list-group-item"> <strong>صوره :</strong>
+  <%= image_tag @animal.image.url.to_s %> </li>
+  </ul>
 
-
-<p>
-  <strong>النوع :</strong>
-  <%= @animal.category %>
-</p>
-
-<p>
-  <strong>الوصف :</strong>
-  <%= @animal.description %>
-</p>
-
-<p>
-  <strong>الموقع :</strong>
-  <%= @animal.location %>
-</p>
-
-<p>
-  <strong>تبنى :</strong>
-  <%= @animal.adapted %>
-</p>
-<p>
-  <strong>صوره :</strong>
-  <%= image_tag @animal.image.url.to_s %>
-</p>
-
+<div class="container">
 <%= link_to 'تعديل', edit_animal_path(@animal) %> 
-
-
-<h2>التعليقات .. </h2>
+</div>
+<h2 class="coment">التعليقات .. </h2>
 
 <% @animal.comments.each do |comment| %>
   <% if comment.body != "" %>
-    <p> <%= comment.body %> </p>
-    <p> <%= comment.user.email %> </p>
+    <ul class="list-group">
+    <li class="list-group-item"> <%= comment.body %> </li>
+    <li class="list-group-item"> <%= comment.user.email %> </li>
+   </ul>
   <% end %>
 <% end %>
 
@@ -41,12 +31,14 @@
 
 <p class="text-center">
               <% if @animal.image.url != nil %>
-                <%= image_tag @animal.image.url, style: "width: 12rem;  height: 250px;"%>
+                <%= image_tag @animal.image.url, style: "width: 12rem; margin:auto; height: 250px;"%>
               <%else%>
               <%= image_tag 'https://fscomps.fotosearch.com/compc/CSP/CSP439/cat-silhouette-clipart__k22365905.jpg' %>
               <%end%>
           </p>
 
+<div>
 <%= link_to 'تعديل', edit_animal_path(@animal) %> |
 <%= link_to 'خلف', root_path %>
-
+</div>
+</div>
