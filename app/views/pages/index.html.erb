@@ -1,3 +1,13 @@
+
+<div style="
+    background-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+"></div>
 <nav dir="ltr" class="nav" class="registration">
   <% if user_signed_in? %>
   <%= link_to "تسجيل الخروج"  , destroy_user_session_path,class:"nav-link nav-link btn btn-outline-warning btn-rounded waves-effect" , method: :delete %>
